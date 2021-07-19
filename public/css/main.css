@@ -1,0 +1,139 @@
+/******************** THIS PAGE FOR SHOP.EJS PAGE *****************/
+/************** Header element style ********************/
+.main-header{
+    width: 100%;/*to take the full width of the page*/
+    height: 3.5rem;/*good*/
+    background-color: rgb(1, 1, 136);
+}
+/* we still have some padding and margin on the header,
+    lets remove them from the body*/
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+/* but we still have top margin from the item list*/
+.main-header__item-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+/*now lets handle each link*/
+.main-header__item{
+    padding: 0;
+    margin: 0;
+    /*add margin to make some space between links*/
+    margin: 1rem;
+}
+.main-header__item a{
+    text-decoration: none;
+    color: ghostwhite;
+    padding: 0.2rem;
+}
+/* to center our links we need to do that by the nav item itself*/
+.main-header__nav{
+    height: 100%;/*as its the child of .main-header so it should takes all its height*/
+    display: flex;/*this line will center our nav within the header element*/
+    align-items: center;/*both lines are very essential to center our nav */
+}
+
+/*now lets add some styles for items like:
+    a:hover -> when we hover over a linl
+    a:active -> when link be clicked and we on its page now
+    a.active -> when the link has an active class attached to it in the html code */
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active{
+    color: #f17070;
+    border-bottom: lightpink solid 1px;
+    font-weight: bolder;
+}
+/**************************************************************/
+
+/***************** Main element styles *********************/
+main{
+padding: 1rem;
+}
+.grid {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  
+  .card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
+  
+  .card__header,
+  .card__content {
+    padding: 1rem;
+  }
+  
+  .card__header h1,
+  .card__content h1,
+  .card__content h2,
+  .card__content p {
+    margin: 0;
+  }
+  
+  .card__image {
+    width: 100%;
+  }
+  
+  .card__image img {
+    width: 100%;
+  }
+  
+  .card__actions {
+      padding: 1rem;
+      text-align: center;
+  }
+  
+  .card__actions button,
+  .card__actions a {
+      margin: 0 0.25rem;
+  }
+  
+  .btn {
+    font: inherit;
+    border: 1px solid #4343bd;
+    color: #4343bd;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .btn:hover,
+  .btn:active {
+    background-color: white;
+    color:#4343bd;
+    font-weight: bolder;
+  }
+  
+/*************************************************************/
+.product-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.product-item {
+    width: 20rem;
+    max-width: 95%;
+}
+
+.product__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product__price {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.product__description {
+    text-align: center;
+}
