@@ -6,16 +6,10 @@ const router=express.Router();
 const adminRoutes_Data=require('./admin');
 const products=adminRoutes_Data.products;
 
-router.get('/home',(req,res,next)=>{
-   // products is an array of objects and each object has a title property
-   let Number_of_products=products.length;
-   res.status(200).render('shop',{
-      PageTitle:'Shop',
-      products:products,
-      path:'/home',
-      hasProducts:Number_of_products
-   });
-});
+// require controllers..
+const products_controllers=require('../controllers/products');
 
+// when we write the controller we don't execute it, we just write its name.
+router.get('/home',products_controllers.get_all_products);
 
 module.exports=router;
